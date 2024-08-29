@@ -3,39 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Aerospace Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        .header .nav a.active {
+            border-bottom: 2px solid #333;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #fff;
+        }
+        .hero-section h1 {
+            font-size: 64px;
+            margin: 0;
+        }
+        .hero-section p {
+            margin: 20px 0 0;
+            font-size: 20px;
+            color: #666;
+        }
+        .project-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px;
+            overflow: hidden;
+        }
+        .project img {
+            width: 100%;
+            display: block;
+        }
+        .project-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-content h2 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .project-content p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .project-content a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            border-bottom: 1px solid #fff;
+        }
+        .project:hover .project-content {
+            opacity: 1;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+        .footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Aerospace Engineering Projects</h1>
+    <header class="header">
+        <div class="logo">My Portfolio<span style="color: red;">.</span></div>
+        <nav class="nav">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="home">
-        <h2>Home</h2>
-        <p>Introduction about yourself and your passion for aerospace engineering.</p>
+
+    <section class="hero-section">
+        <h1>Hello, You.</h1>
+        <p>👋 Double-click to introduce yourself. Tell the world what you do — and why they should care.</p>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Details about your projects, including images and descriptions.</p>
+
+    <section class="project-section">
+        <div class="project">
+            <img src="project-image-1.jpg" alt="Sinder Project">
+            <div class="project-content">
+                <h2>01 Sinder</h2>
+                <p>A dating app — for single socks.</p>
+                <a href="#">view project</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="project-image-2.jpg" alt="iGotchu Project">
+            <div class="project-content">
+                <h2>02 iGotchu</h2>
+                <p>An app that just gets you.</p>
+                <a href="#">view project</a>
+            </div>
+        </div>
     </section>
-    <section id="about">
-        <h2>About</h2>
-        <p>Information about your background and skills.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Contact form or email address.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
+
+    <footer class="footer">
+        <div>My Portfolio<span style="color: red;">.</span></div>
+        <div>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Behance</a>
+            <a href="#">Dribbble</a>
+            <a href="#">Image License Info</a>
+        </div>
+        <div>Powered by Webflow</div>
+        <div>This section is a Symbol. Edit it once, and watch it update across your site. Like freaking magic.</div>
     </footer>
 </body>
 </html>
